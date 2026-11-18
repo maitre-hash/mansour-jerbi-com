@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+function resolveSiteUrl(): URL {
+  const raw = (process.env.NEXT_PUBLIC_SITE_URL || "https://mansour-jerbi.com").trim();
+  const normalized = raw.startsWith("http://") || raw.startsWith("https://") ? raw : `https://${raw}`;
+  try {
+    return new URL(normalized);
+  } catch {
+    return new URL("https://mansour-jerbi.com");
+  }
+}
+
 export const metadata: Metadata = {
   title: "Cabinet Maître Mansour Jerbi | Avocat — Ras Jebel, Bizerte, Tunisie",
   description:
     "Cabinet d'Avocat et Conseil Juridique de Maître Mansour Jerbi à Ras Jebel (Bizerte, Tunisie). Droit civil, foncier, commercial, famille, pénal et accompagnement des Tunisiens à l'étranger.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://mansour-jerbi.com"),
+  metadataBase: resolveSiteUrl(),
   openGraph: {
     title: "Cabinet Maître Mansour Jerbi — Avocat auprès des Tribunaux",
     description:
