@@ -93,10 +93,9 @@ export function PublicSite() {
       <header className="site-header">
         <div className="container header-inner">
           <a href="#" className="brand">
-            <div className="monogram" aria-hidden="true">
-              MJ
-            </div>
-            <div>
+        <div className="monogram">
+  <img src="/profile.jpg" alt={t.attorneyName} />
+</div>
               <span className="brand-title">{t.attorneyName}</span>
               <span className="brand-subtitle">{t.cabinetTitle}</span>
             </div>
