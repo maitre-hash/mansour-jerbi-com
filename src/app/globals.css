@@ -363,17 +363,22 @@ a {
 }
 
 .crest-seal {
-  width: 72px;
-  height: 72px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   border: 2px solid var(--gold-400);
-  display: grid;
-  place-items: center;
-  font-size: 1.85rem;
+  overflow: hidden;
   margin-bottom: 1.2rem;
   background: rgba(184, 146, 74, 0.12);
 }
 
+.crest-seal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
 /* Sections */
 .section {
   padding-block: 4.5rem;
