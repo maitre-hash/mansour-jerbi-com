@@ -162,11 +162,11 @@ export function PublicSite() {
             </div>
           </div>
 
-          <div className="crest-card">
-            <div className="crest-seal">⚖️</div>
-          <div className="crest-seal">
-  <img src="/profile.jpeg" alt={t.attorneyName} />
-</div>
+                   <div className="crest-card">
+            <div className="crest-seal">
+              <img src="/profile.jpeg" alt={t.attorneyName} />
+            </div>
+            <h2 style={{ color: "#fff", fontSize: "1.65rem", marginBottom: "0.35rem" }}>
               {t.attorneyName}
             </h2>
             <p style={{ color: "var(--gold-400)", marginTop: 0, fontWeight: 600 }}>
