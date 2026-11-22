@@ -129,19 +129,24 @@ a {
 }
 
 .monogram {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-sm);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   border: 1.5px solid var(--gold-500);
   background: linear-gradient(135deg, var(--navy-800), var(--navy-950));
-  color: var(--gold-400);
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.2rem;
-  letter-spacing: 0.06em;
+  overflow: hidden;
   display: grid;
   place-items: center;
   flex-shrink: 0;
+}
+
+.monogram img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
 }
 
 .brand-title {
