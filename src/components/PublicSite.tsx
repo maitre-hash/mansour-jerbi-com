@@ -92,15 +92,15 @@ export function PublicSite() {
       {/* Main Navigation Header */}
       <header className="site-header">
         <div className="container header-inner">
-          <a href="#" className="brand">
-        <div className="monogram">
-  <img src="/profile.jpg" alt={t.attorneyName} />
-</div>
+                 <a href="#" className="brand">
+            <div className="monogram">
+              <img src="/profile.jpg" alt={t.attorneyName} />
+            </div>
+            <div>
               <span className="brand-title">{t.attorneyName}</span>
               <span className="brand-subtitle">{t.cabinetTitle}</span>
             </div>
           </a>
-
           <nav className="nav-links">
             <a href="#about" className="nav-link">{t.nav.about}</a>
             <a href="#practices" className="nav-link">{t.nav.practices}</a>
